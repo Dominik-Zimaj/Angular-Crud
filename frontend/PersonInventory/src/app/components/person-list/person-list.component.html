@@ -1,0 +1,61 @@
+<div>
+    <div>
+        <div>
+            <input 
+            type="text"
+            class="form-control"
+            placeholder="Search by first name"
+            [(ngModel)] = "firstName" 
+            />
+            <button class="btn" type="button" (click)="searchByFirstName()">Search</button>
+            <br>
+            <input 
+            type="text"
+            class="form-control"
+            placeholder="Search by last name"
+            [(ngModel)] = "lastName" 
+            />
+            <button class="btn" type="button" (click)="searchByLastName()">Search</button>
+        </div>
+    </div>
+    <div>
+        <h4>Person List</h4>
+        <ul class="list-group">
+            <li
+            class="list-group-item"
+            *ngFor="let person of person; let i = index"
+            [class.active]="i == currentIndex"
+            (click)="setActivePerson(person, i)"
+            >
+            {{ person.firstName }} {{ person.lastName }}
+            </li>
+        </ul>
+
+        <button class="btn" (click)="removeAllPersons()">Remove all</button>
+    </div>
+    <div >
+        <div *ngIf="currentPerson">
+            <h4 class="h4">Person</h4>
+            <div>
+                <label><strong>ID:</strong></label> {{ currentPerson.id }}
+            </div>
+            <div>
+                <label><strong>First Name:</strong></label> {{ currentPerson.firstName }}
+            </div>
+            <div>
+                <label><strong>Last Name:</strong></label>  {{ currentPerson.lastName }}
+            </div>
+            <div>
+                <label><strong>E-Mail</strong></label> {{ currentPerson.email }}
+            </div>
+
+            <a class="btn badge" routerLink="/person/{{ currentPerson.id}}">Edit</a>
+            <a class="btn" (click)="removeActivePerson(currentPerson.id)"> Remove</a>
+        </div>
+
+        <div *ngIf="!currentPerson">
+            <br />
+            <p>Please click on a person</p>
+        </div>
+    </div>
+</div>

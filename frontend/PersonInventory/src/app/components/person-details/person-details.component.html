@@ -1,0 +1,47 @@
+<div class="main">
+    <div *ngIf="currentPerson" class="edit-form">
+    <h4>Person Edit</h4>
+    <div>
+    <form>
+        <div class="form-group">
+            <label for="firstName">First Name</label>
+            <input 
+            type="text"
+            class="form-control"
+            id="firstName"
+            [(ngModel)]= "currentPerson.firstName"
+            name="firstName"
+            />
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last Name</label>
+            <input 
+            type="text"
+            class="form-control"
+            id="lastName"
+            [(ngModel)]= "currentPerson.lastName"
+            name="lastName"
+            />
+        </div>
+        <div class="form-group">
+            <label for="email">E-Mail</label>
+            <input 
+            type="text"
+            class="form-control"
+            id="email"
+            [(ngModel)]= "currentPerson.email"
+            name="email"
+            />
+        </div>
+    </form>
+
+    <button type="submit" class="btn" (click)="updatePerson()">Update</button>
+    <p>{{ message }}</p>
+    </div>
+</div>
+
+    <div *ngIf="!currentPerson">
+        <br />
+        <p>Cannot access Person</p>
+    </div>
+</div>
