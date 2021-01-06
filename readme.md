@@ -1,11 +1,11 @@
-Person Inventory
+# Person Inventory
 
-Übersicht:
+## Übersicht:
 Dies ist eine kleine Angular CRUD App, die Personen verwaltet. Auf ein Mock Backend wurde verzichtet und eine Java API geschrieben, die alle Daten in einer "in-memory database" (H2) speichert.
 
-Das Backend
+### Das Backend
 
-Die Datenbank lässt sich über "localhost:8080/h2-console" mit folgenden Einstellungen öffnen:
+Die Datenbank lässt sich über "localhost:8080/h2-console" mit folgenden Einstellungen öffnen:\n
 Driver Class: 	org.h2.Driver
 JDBC URL: 	jdbc:h2:mem:testdb
 User Name: 	sa
@@ -23,13 +23,13 @@ DELETE: "localhost:8008/api/person/{id}					Löscht nur die Person mit der id
 
 
 
-Das Frontend 
+### Das Frontend 
 
 Die Angular App lässt sich über "localhost:4200" erreichen. Der Link "Person" oben rechts listet alle Personen auf und über den Link "Add" können Personen hinzugefügt werden.
 In der Liste lassen sich Personen suchen und anklicken um Details anzusehen und die Person zu bearbeiten oder zu entfernen.
 
 
-Vorgehensweise:
+### Vorgehensweise:
 
 Zu erst wurde das Backend eingerichtet. Die Klasse Person enthält die Attribute ID, Vorname, Nachname und E-Mail. Die Klasse PersonRepository implementiert JPARepository und somit lassen sich standard Methoden direkt einsetzen. Zwei eigene Methoden wurden definiert um nach Vor- und Nachnamen suchen zu können.
 Die Klasse PersonController beinhaltet alle HTTP Aufrufe wie oben gelistet.
