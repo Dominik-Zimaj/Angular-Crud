@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-
+//      Ohne die CrossOrigin Annotation ließ Spring Boot keine Anfragen aus der Angular App zu.
 @CrossOrigin
 @RestController
 @RequestMapping("/api")
@@ -28,6 +28,9 @@ public class PersonController {
     @Autowired
     PersonRepository personRepository;
 
+    /*  Es wurden Methoden implementiert, die alle Personen auflisten, nach Vor- oder Nachnamen suchen können, eine Person erstellen, bearbeiten oder löschen oder alle Personen löschen können.
+        Diese geben entsprechende HTTP Statusmeldungen zurück.
+    */
 
    @GetMapping("/person")
     public ResponseEntity<List<Person>> getAllPersons() {

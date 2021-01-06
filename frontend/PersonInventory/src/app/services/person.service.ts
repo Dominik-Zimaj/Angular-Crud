@@ -9,6 +9,8 @@ const baseUrl = "http://localhost:8080/api/person";
 })
 export class PersonService {
 
+  //  Die hier implementierten Methoden korrespondieren mit den Methoden in der Controller Klasse im Backend.
+
   constructor(private http: HttpClient) { }
 
   getAll(): Observable<any> {

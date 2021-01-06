@@ -8,6 +8,10 @@ import { PersonService } from "src/app/services/person.service";
 })
 export class AddPersonComponent implements OnInit {
 
+  /*  Diese Component beinhaltet eine Methode um die eingegebenen Attribute einer neuen Person an den Service weiterzuleiten 
+      und um die Werte wieder leer zu setzen wenn eine neue Person hinzugefügt werden soll. 
+  */
+
   person = {
     firstName: "",
     lastName: "",
@@ -23,6 +27,8 @@ export class AddPersonComponent implements OnInit {
   }
 
   savePerson(): void {
+    //Check ob die Felder nicht leer sind und nur dann die Person zu speichern.
+
     if (this.person.firstName == "")
       alert("The first name is empty");
 

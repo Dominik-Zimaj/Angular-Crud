@@ -4,6 +4,8 @@ import { PersonListComponent } from "./components/person-list/person-list.compon
 import { PersonDetailsComponent } from "./components/person-details/person-details.component";
 import { AddPersonComponent } from "./components/add-person/add-person.component";
 
+//  Für die drei Components werden drei Routen eingerichtet.
+
 const routes: Routes = [
   { path: "", redirectTo: "persons", pathMatch: "full" },
   { path: "person", component: PersonListComponent }, 

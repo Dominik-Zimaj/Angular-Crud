@@ -1,6 +1,7 @@
 <div>
     <div>
         <div>
+            <!--    Hier stehen zwei Textfelder mit Buttons, mit denen Personen nach Vor- oder Nachnamen aufgelistet werden können  -->
             <input 
             type="text"
             class="form-control"
@@ -19,6 +20,7 @@
         </div>
     </div>
     <div>
+        <!--    Hier werden alle Personen mit nur mit ihrem Vor- und Nachnamen aufgelistet  -->
         <h4>Person List</h4>
         <ul class="list-group">
             <li
@@ -34,6 +36,7 @@
         <button class="btn" (click)="removeAllPersons()">Remove all</button>
     </div>
     <div >
+        <!--    Falls ein Name angeklickt wird, werden hier alle Details der Person angezeigt   -->
         <div *ngIf="currentPerson">
             <h4 class="h4">Person</h4>
             <div>
@@ -49,6 +52,7 @@
                 <label><strong>E-Mail</strong></label> {{ currentPerson.email }}
             </div>
 
+            <!--    Ein Klick auf den Button "Edit" leitet einen auf die Component person-details weiter, in der die Person bearbeitet werden kann  -->
             <a class="btn badge" routerLink="/person/{{ currentPerson.id}}">Edit</a>
             <a class="btn" (click)="removeActivePerson(currentPerson.id)"> Remove</a>
         </div>

@@ -3,6 +3,8 @@ package com.zimaj.backendApi;
 import javax.persistence.*;
 
 
+//Ein standard Modell, dass alle geforderten Attribute einer Person besitzt. 
+
 
 @Entity
 @Table(name="Person")

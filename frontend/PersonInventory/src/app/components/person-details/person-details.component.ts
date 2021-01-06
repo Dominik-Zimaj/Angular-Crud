@@ -9,6 +9,9 @@ import { ActivatedRoute, Router } from "@angular/router";
 })
 export class PersonDetailsComponent implements OnInit {
 
+  /*  In dieser Component kann eine bestehende Person bearbeitet werden. 
+  */  
+
   currentPerson = null;
   message = "";
   
@@ -21,6 +24,7 @@ export class PersonDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.message = "";
+    //Hier wird die ID der Person aus dem Pfad ausgelesen.
     this.getPerson(this.route.snapshot.paramMap.get('id'));
   }
 
@@ -48,16 +52,6 @@ export class PersonDetailsComponent implements OnInit {
       });
   }
 
-  deletePerson(): void {
-    this.personService.delete(this.currentPerson.id)
-    .subscribe(
-      response => {
-        console.log(response);
-        this.router.navigate(["/person"]);
-      },
-      error => {
-        console.log(error);
-      });
-  }
+  
 
 }

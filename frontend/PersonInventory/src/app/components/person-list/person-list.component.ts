@@ -8,6 +8,9 @@ import { PersonService } from "src/app/services/person.service";
 })
 export class PersonListComponent implements OnInit {
 
+  /*  In dieser Component werden findet die Auflistung aller Personen statt, sowie können einzelne Personen oder alle Gelöscht werden.
+  */  
+
   person: any;
   currentPerson: any = null;
   currentIndex = -1;
@@ -18,8 +21,10 @@ export class PersonListComponent implements OnInit {
   constructor(private personService: PersonService) { }
 
   ngOnInit(): void {
-    this.searchByLastName();
+    //Auflistung aller Personen bei initialisierung der Component.
+    this.getList();
   }
+
 
   getList(): void {
     this.personService.getAll()
