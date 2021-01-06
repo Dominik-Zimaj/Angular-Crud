@@ -12,14 +12,14 @@ User Name: 	sa
 Password:  
 
 Die API hat folgende HTTP Aufrufe definiert:  
-GET:	"localhost:8008/api/person"					Listet alle Personen in der Datenbank auf  
-GET:	"localhost:8008/api/person/firstname?firstName={String}"	Sucht in der Datenbank nach Personen mit dem eingegebenen Vornamen  
-GET:	"localhost:8008/api/person/lastname?lastName={String}"		Sucht in der Datenbank nach Personen mit dem eingegebenen Nachnamen  
-GET:	"localhost:8008/api/person/{id}"				Zeigt die Details einer Person an  
-POST:	"localhost:8008/api/person"	 (JSON Body)			Erstellt eine Person  
-PUT:	"localhost:8008/api/person/{id}" (JSON Body)			Updatet eine Person  
-DELETE:	"localhost:8008/api/person/					Löscht alle Personen in der Datenbank  
-DELETE: "localhost:8008/api/person/{id}					Löscht nur die Person mit der id  
+GET:	"localhost:8008/api/person"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Listet alle Personen in der Datenbank auf  
+GET:	"localhost:8008/api/person/firstname?firstName={String}"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sucht in der Datenbank nach Personen mit dem eingegebenen Vornamen  
+GET:	"localhost:8008/api/person/lastname?lastName={String}"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sucht in der Datenbank nach Personen mit dem eingegebenen Nachnamen  
+GET:	"localhost:8008/api/person/{id}"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Zeigt die Details einer Person an  
+POST:	"localhost:8008/api/person"	 (JSON Body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Erstellt eine Person  
+PUT:	"localhost:8008/api/person/{id}" (JSON Body)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Updatet eine Person  
+DELETE:	"localhost:8008/api/person/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Löscht alle Personen in der Datenbank  
+DELETE: "localhost:8008/api/person/{id}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Löscht nur die Person mit der id  
 
 
 
